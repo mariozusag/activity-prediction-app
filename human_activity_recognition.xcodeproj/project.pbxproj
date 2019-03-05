@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F93DAF1222EE93A003FE149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F93DAF0222EE93A003FE149 /* AppDelegate.swift */; };
+		7F93DAF3222EE93A003FE149 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F93DAF2222EE93A003FE149 /* ViewController.swift */; };
+		7F93DAF6222EE93A003FE149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F93DAF4222EE93A003FE149 /* Main.storyboard */; };
+		7F93DAF9222EE93A003FE149 /* human_activity_recognition.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F93DAF7222EE93A003FE149 /* human_activity_recognition.xcdatamodeld */; };
+		7F93DAFB222EE93B003FE149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F93DAFA222EE93B003FE149 /* Assets.xcassets */; };
+		7F93DAFE222EE93B003FE149 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F93DAFC222EE93B003FE149 /* LaunchScreen.storyboard */; };
+		7F93DB09222EE93B003FE149 /* human_activity_recognitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F93DB08222EE93B003FE149 /* human_activity_recognitionTests.swift */; };
+		7F93DB14222EE93B003FE149 /* human_activity_recognitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F93DB13222EE93B003FE149 /* human_activity_recognitionUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F93DB05222EE93B003FE149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F93DAE5222EE93A003FE149 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F93DAEC222EE93A003FE149;
+			remoteInfo = human_activity_recognition;
+		};
+		7F93DB10222EE93B003FE149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F93DAE5222EE93A003FE149 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F93DAEC222EE93A003FE149;
+			remoteInfo = human_activity_recognition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F93DAED222EE93A003FE149 /* human_activity_recognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = human_activity_recognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F93DAF0222EE93A003FE149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F93DAF2222EE93A003FE149 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F93DAF5222EE93A003FE149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F93DAF8222EE93A003FE149 /* human_activity_recognition.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = human_activity_recognition.xcdatamodel; sourceTree = "<group>"; };
+		7F93DAFA222EE93B003FE149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F93DAFD222EE93B003FE149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F93DAFF222EE93B003FE149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F93DB04222EE93B003FE149 /* human_activity_recognitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = human_activity_recognitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F93DB08222EE93B003FE149 /* human_activity_recognitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = human_activity_recognitionTests.swift; sourceTree = "<group>"; };
+		7F93DB0A222EE93B003FE149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F93DB0F222EE93B003FE149 /* human_activity_recognitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = human_activity_recognitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F93DB13222EE93B003FE149 /* human_activity_recognitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = human_activity_recognitionUITests.swift; sourceTree = "<group>"; };
+		7F93DB15222EE93B003FE149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F93DAEA222EE93A003FE149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F93DB01222EE93B003FE149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F93DB0C222EE93B003FE149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F93DAE4222EE93A003FE149 = {
+			isa = PBXGroup;
+			children = (
+				7F93DAEF222EE93A003FE149 /* human_activity_recognition */,
+				7F93DB07222EE93B003FE149 /* human_activity_recognitionTests */,
+				7F93DB12222EE93B003FE149 /* human_activity_recognitionUITests */,
+				7F93DAEE222EE93A003FE149 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F93DAEE222EE93A003FE149 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F93DAED222EE93A003FE149 /* human_activity_recognition.app */,
+				7F93DB04222EE93B003FE149 /* human_activity_recognitionTests.xctest */,
+				7F93DB0F222EE93B003FE149 /* human_activity_recognitionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F93DAEF222EE93A003FE149 /* human_activity_recognition */ = {
+			isa = PBXGroup;
+			children = (
+				7F93DAF0222EE93A003FE149 /* AppDelegate.swift */,
+				7F93DAF2222EE93A003FE149 /* ViewController.swift */,
+				7F93DAF4222EE93A003FE149 /* Main.storyboard */,
+				7F93DAFA222EE93B003FE149 /* Assets.xcassets */,
+				7F93DAFC222EE93B003FE149 /* LaunchScreen.storyboard */,
+				7F93DAFF222EE93B003FE149 /* Info.plist */,
+				7F93DAF7222EE93A003FE149 /* human_activity_recognition.xcdatamodeld */,
+			);
+			path = human_activity_recognition;
+			sourceTree = "<group>";
+		};
+		7F93DB07222EE93B003FE149 /* human_activity_recognitionTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F93DB08222EE93B003FE149 /* human_activity_recognitionTests.swift */,
+				7F93DB0A222EE93B003FE149 /* Info.plist */,
+			);
+			path = human_activity_recognitionTests;
+			sourceTree = "<group>";
+		};
+		7F93DB12222EE93B003FE149 /* human_activity_recognitionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7F93DB13222EE93B003FE149 /* human_activity_recognitionUITests.swift */,
+				7F93DB15222EE93B003FE149 /* Info.plist */,
+			);
+			path = human_activity_recognitionUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F93DAEC222EE93A003FE149 /* human_activity_recognition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F93DB18222EE93B003FE149 /* Build configuration list for PBXNativeTarget "human_activity_recognition" */;
+			buildPhases = (
+				7F93DAE9222EE93A003FE149 /* Sources */,
+				7F93DAEA222EE93A003FE149 /* Frameworks */,
+				7F93DAEB222EE93A003FE149 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = human_activity_recognition;
+			productName = human_activity_recognition;
+			productReference = 7F93DAED222EE93A003FE149 /* human_activity_recognition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F93DB03222EE93B003FE149 /* human_activity_recognitionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F93DB1B222EE93B003FE149 /* Build configuration list for PBXNativeTarget "human_activity_recognitionTests" */;
+			buildPhases = (
+				7F93DB00222EE93B003FE149 /* Sources */,
+				7F93DB01222EE93B003FE149 /* Frameworks */,
+				7F93DB02222EE93B003FE149 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F93DB06222EE93B003FE149 /* PBXTargetDependency */,
+			);
+			name = human_activity_recognitionTests;
+			productName = human_activity_recognitionTests;
+			productReference = 7F93DB04222EE93B003FE149 /* human_activity_recognitionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7F93DB0E222EE93B003FE149 /* human_activity_recognitionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F93DB1E222EE93B003FE149 /* Build configuration list for PBXNativeTarget "human_activity_recognitionUITests" */;
+			buildPhases = (
+				7F93DB0B222EE93B003FE149 /* Sources */,
+				7F93DB0C222EE93B003FE149 /* Frameworks */,
+				7F93DB0D222EE93B003FE149 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F93DB11222EE93B003FE149 /* PBXTargetDependency */,
+			);
+			name = human_activity_recognitionUITests;
+			productName = human_activity_recognitionUITests;
+			productReference = 7F93DB0F222EE93B003FE149 /* human_activity_recognitionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F93DAE5222EE93A003FE149 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Mario Zusag  ";
+				TargetAttributes = {
+					7F93DAEC222EE93A003FE149 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7F93DB03222EE93B003FE149 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 7F93DAEC222EE93A003FE149;
+					};
+					7F93DB0E222EE93B003FE149 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 7F93DAEC222EE93A003FE149;
+					};
+				};
+			};
+			buildConfigurationList = 7F93DAE8222EE93A003FE149 /* Build configuration list for PBXProject "human_activity_recognition" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F93DAE4222EE93A003FE149;
+			productRefGroup = 7F93DAEE222EE93A003FE149 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F93DAEC222EE93A003FE149 /* human_activity_recognition */,
+				7F93DB03222EE93B003FE149 /* human_activity_recognitionTests */,
+				7F93DB0E222EE93B003FE149 /* human_activity_recognitionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F93DAEB222EE93A003FE149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F93DAFE222EE93B003FE149 /* LaunchScreen.storyboard in Resources */,
+				7F93DAFB222EE93B003FE149 /* Assets.xcassets in Resources */,
+				7F93DAF6222EE93A003FE149 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F93DB02222EE93B003FE149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F93DB0D222EE93B003FE149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F93DAE9222EE93A003FE149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F93DAF3222EE93A003FE149 /* ViewController.swift in Sources */,
+				7F93DAF9222EE93A003FE149 /* human_activity_recognition.xcdatamodeld in Sources */,
+				7F93DAF1222EE93A003FE149 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F93DB00222EE93B003FE149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F93DB09222EE93B003FE149 /* human_activity_recognitionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F93DB0B222EE93B003FE149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F93DB14222EE93B003FE149 /* human_activity_recognitionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F93DB06222EE93B003FE149 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F93DAEC222EE93A003FE149 /* human_activity_recognition */;
+			targetProxy = 7F93DB05222EE93B003FE149 /* PBXContainerItemProxy */;
+		};
+		7F93DB11222EE93B003FE149 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F93DAEC222EE93A003FE149 /* human_activity_recognition */;
+			targetProxy = 7F93DB10222EE93B003FE149 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F93DAF4222EE93A003FE149 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F93DAF5222EE93A003FE149 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7F93DAFC222EE93B003FE149 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F93DAFD222EE93B003FE149 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F93DB16222EE93B003FE149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F93DB17222EE93B003FE149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F93DB19222EE93B003FE149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P79FDN44LA;
+				INFOPLIST_FILE = human_activity_recognition/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "personal.human-activity-recognition";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F93DB1A222EE93B003FE149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P79FDN44LA;
+				INFOPLIST_FILE = human_activity_recognition/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "personal.human-activity-recognition";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7F93DB1C222EE93B003FE149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P79FDN44LA;
+				INFOPLIST_FILE = human_activity_recognitionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "personal.human-activity-recognitionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/human_activity_recognition.app/human_activity_recognition";
+			};
+			name = Debug;
+		};
+		7F93DB1D222EE93B003FE149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P79FDN44LA;
+				INFOPLIST_FILE = human_activity_recognitionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "personal.human-activity-recognitionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/human_activity_recognition.app/human_activity_recognition";
+			};
+			name = Release;
+		};
+		7F93DB1F222EE93B003FE149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P79FDN44LA;
+				INFOPLIST_FILE = human_activity_recognitionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "personal.human-activity-recognitionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = human_activity_recognition;
+			};
+			name = Debug;
+		};
+		7F93DB20222EE93B003FE149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P79FDN44LA;
+				INFOPLIST_FILE = human_activity_recognitionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "personal.human-activity-recognitionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = human_activity_recognition;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F93DAE8222EE93A003FE149 /* Build configuration list for PBXProject "human_activity_recognition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F93DB16222EE93B003FE149 /* Debug */,
+				7F93DB17222EE93B003FE149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F93DB18222EE93B003FE149 /* Build configuration list for PBXNativeTarget "human_activity_recognition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F93DB19222EE93B003FE149 /* Debug */,
+				7F93DB1A222EE93B003FE149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F93DB1B222EE93B003FE149 /* Build configuration list for PBXNativeTarget "human_activity_recognitionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F93DB1C222EE93B003FE149 /* Debug */,
+				7F93DB1D222EE93B003FE149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F93DB1E222EE93B003FE149 /* Build configuration list for PBXNativeTarget "human_activity_recognitionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F93DB1F222EE93B003FE149 /* Debug */,
+				7F93DB20222EE93B003FE149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F93DAF7222EE93A003FE149 /* human_activity_recognition.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F93DAF8222EE93A003FE149 /* human_activity_recognition.xcdatamodel */,
+			);
+			currentVersion = 7F93DAF8222EE93A003FE149 /* human_activity_recognition.xcdatamodel */;
+			path = human_activity_recognition.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7F93DAE5222EE93A003FE149 /* Project object */;
+}
