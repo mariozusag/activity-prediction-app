@@ -10,7 +10,7 @@ import UIKit
 import CoreMotion
 
 class ViewController: UIViewController {
-    let hertz: Double = 50  // 50Hz
+    let hertz: Int = 50  // 50Hz
     let manager = CMMotionManager()
     var timer: Timer!
     
@@ -19,12 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tenSecondsButtonClick: UIButton!
     @IBAction func tenSecondsButtonClick(_ sender: Any) {
         print("clicked")
-        UIView.animate(withDuration: 0.5, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
-            //self.tenSecondsButtonClick.alpha = 0.0
-            //self.runningAppLogo.isHidden = true
-        }, completion:nil)
+        self.tenSecondsButtonClick.setTitle("Recording", for:.normal)
         if manager.isAccelerometerAvailable{
-            get_accelerometer_data(10000)
+            get_accelerometer_data(1000)
         }
     }
     // Add constraints, such that the logo will always appear centered
@@ -34,7 +31,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Move the logo out of the visible screen before the view is loaded
-        horizontalLogoAlignmentConstraint.constant -= view.bounds.width
+        self.runningAppLogo.alpha = 0.0
     }
     
     override func viewDidLoad() {
@@ -44,57 +41,82 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // EaseIn the logo into the screen after the view appeared
-        UIView.animate(withDuration: 1.5,
+        UIView.animate(withDuration: 0.5,
                        delay: 0.0,
-                       options: [.curveEaseOut],
-                       animations:{
-                        self.horizontalLogoAlignmentConstraint.constant += self.view.bounds.width
-                         self.view.layoutIfNeeded()
-                       },
-                       completion: nil)
-        // move the logo to the top
-        UIView.animate(withDuration: 1.5,
-                       delay: 1.5,
-                       options: [.curveEaseOut],
-                       animations:{
-                        self.verticalLogoAlignmentConstraint.constant -= 0.25*self.view.bounds.height
-                        self.view.layoutIfNeeded()},
-                       completion: nil)
+                       options: UIView.AnimationOptions.curveEaseOut,
+                       animations: {
+                        self.runningAppLogo.alpha = 1.0},
+                       completion:nil)
+        
+        UIView.animate(withDuration: 0.5,
+                       delay: 1.0,
+                       options: UIView.AnimationOptions.curveEaseOut,
+                       animations: {
+                        self.tenSecondsButtonClick.alpha = 1.0},
+                       completion:nil)
         
     }
     
-    func get_accelerometer_data(_ milliseconds: Double){
-        print("Inside get accelerometer data")
-        
+    func get_accelerometer_data(_ milliseconds: Int){
+        print("Getting accelerometer data for \(milliseconds)ms ... ")
+        var data = [[String:Double]]()
         // after that call, the accelerometer data is available
         manager.startAccelerometerUpdates()
-        var counter = hertz*milliseconds/1000.0
+        let unitOfMeasurement = 1000/hertz
+        var counter = 0
+        var dict: [String: Double] = ["counter": 0.0, "x": 0.0, "y": 0.0, "z": 0.0]
+        var singleData = [Double]()
         timer = Timer(fire: Date(),
-                      interval: 1.0/hertz, //frequency
+                      interval: 1.0/Double(hertz), //frequency
                       repeats: true,
                       block: {
                         (timer) in
                         // Get the accelerometer data.
-                        if let data = self.manager.accelerometerData{
-                            let x = data.acceleration.x
-                            let y = data.acceleration.y
-                            let z = data.acceleration.z
-                            print("x: \(x), y: \(y), \(z)")
-                            if counter <= 0{
+                        if let measurements = self.manager.accelerometerData{
+                            let x = measurements.acceleration.x
+                            let y = measurements.acceleration.y
+                            let z = measurements.acceleration.z
+                            dict["counter"] = Double(counter)
+                            dict["x"] = x
+                            dict["y"] = y
+                            dict["z"] = z
+                            
+                            singleData = [Double(counter), x, y, z]
+                            
+                            data.append(dict)
+                            
+                            if counter >= milliseconds{
+                                self.save_results(data)
                                 timer.invalidate()
                             }
-                            counter -= 1
-                            
+                            counter += unitOfMeasurement
                         }
-        })
+                        
+                    }
+        )
         // Add the timer to the current run loop.
         RunLoop.current.add(timer!, forMode: RunLoop.Mode.default)
-        }
+    }
     
-    func show_countdown(){
+    func save_results(_ result:[[String:Double]]){
+        var csvString: String = "timestamp(ms),acceleration.x, acceleration.y, acceleration.z"
+        for sample in result{
+            csvString += "\(sample["counter"]!), \(sample["x"]!), \(sample["y"]!), \(sample["z"]!)\n"
+        }
+        //print(csvString)
+        let fileManager = FileManager.default
+        do {
+            let path = try fileManager.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
+            print("path:\(path)")
+            let fileURL = path.appendingPathComponent("CSVRec.csv")
+            try csvString.write(to: fileURL, atomically: true, encoding: .utf8)
+        } catch {
+            print("error creating file")
+        }
+        
         
     }
+    
     
         
     }
