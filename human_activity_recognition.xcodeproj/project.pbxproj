@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F6B7FA02236574C00AAAE4E /* AccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B7F9F2236574C00AAAE4E /* AccelerometerViewController.swift */; };
+		7F6B7FA22236576800AAAE4E /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B7FA12236576800AAAE4E /* GraphView.swift */; };
+		7F6B7FA52236577600AAAE4E /* CGContext+GraphLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B7FA32236577600AAAE4E /* CGContext+GraphLines.swift */; };
+		7F6B7FA62236577600AAAE4E /* GraphSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B7FA42236577600AAAE4E /* GraphSegment.swift */; };
+		7F6B7FA82236578200AAAE4E /* MotionGraphContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B7FA72236578200AAAE4E /* MotionGraphContainer.swift */; };
 		7F93DAF1222EE93A003FE149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F93DAF0222EE93A003FE149 /* AppDelegate.swift */; };
 		7F93DAF3222EE93A003FE149 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F93DAF2222EE93A003FE149 /* ViewController.swift */; };
 		7F93DAF6222EE93A003FE149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F93DAF4222EE93A003FE149 /* Main.storyboard */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F6B7F9F2236574C00AAAE4E /* AccelerometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerViewController.swift; sourceTree = "<group>"; };
+		7F6B7FA12236576800AAAE4E /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		7F6B7FA32236577600AAAE4E /* CGContext+GraphLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+GraphLines.swift"; sourceTree = "<group>"; };
+		7F6B7FA42236577600AAAE4E /* GraphSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphSegment.swift; sourceTree = "<group>"; };
+		7F6B7FA72236578200AAAE4E /* MotionGraphContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionGraphContainer.swift; sourceTree = "<group>"; };
 		7F93DAED222EE93A003FE149 /* human_activity_recognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = human_activity_recognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F93DAF0222EE93A003FE149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F93DAF2222EE93A003FE149 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +109,11 @@
 		7F93DAEF222EE93A003FE149 /* human_activity_recognition */ = {
 			isa = PBXGroup;
 			children = (
+				7F6B7FA32236577600AAAE4E /* CGContext+GraphLines.swift */,
+				7F6B7FA72236578200AAAE4E /* MotionGraphContainer.swift */,
+				7F6B7FA42236577600AAAE4E /* GraphSegment.swift */,
+				7F6B7FA12236576800AAAE4E /* GraphView.swift */,
+				7F6B7F9F2236574C00AAAE4E /* AccelerometerViewController.swift */,
 				7F93DAF0222EE93A003FE149 /* AppDelegate.swift */,
 				7F93DAF2222EE93A003FE149 /* ViewController.swift */,
 				7F93DAF4222EE93A003FE149 /* Main.storyboard */,
@@ -259,8 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6B7FA82236578200AAAE4E /* MotionGraphContainer.swift in Sources */,
+				7F6B7FA62236577600AAAE4E /* GraphSegment.swift in Sources */,
+				7F6B7FA52236577600AAAE4E /* CGContext+GraphLines.swift in Sources */,
+				7F6B7FA22236576800AAAE4E /* GraphView.swift in Sources */,
 				7F93DAF3222EE93A003FE149 /* ViewController.swift in Sources */,
 				7F93DAF9222EE93A003FE149 /* human_activity_recognition.xcdatamodeld in Sources */,
+				7F6B7FA02236574C00AAAE4E /* AccelerometerViewController.swift in Sources */,
 				7F93DAF1222EE93A003FE149 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -59,12 +59,11 @@ class ViewController: UIViewController {
     
     func get_accelerometer_data(_ milliseconds: Int){
         print("Getting accelerometer data for \(milliseconds)ms ... ")
-        var data = [[String:Double]]()
+        var data = [[Double]]()
         // after that call, the accelerometer data is available
         manager.startAccelerometerUpdates()
         let unitOfMeasurement = 1000/hertz
         var counter = 0
-        var dict: [String: Double] = ["counter": 0.0, "x": 0.0, "y": 0.0, "z": 0.0]
         var singleData = [Double]()
         timer = Timer(fire: Date(),
                       interval: 1.0/Double(hertz), //frequency
@@ -76,14 +75,10 @@ class ViewController: UIViewController {
                             let x = measurements.acceleration.x
                             let y = measurements.acceleration.y
                             let z = measurements.acceleration.z
-                            dict["counter"] = Double(counter)
-                            dict["x"] = x
-                            dict["y"] = y
-                            dict["z"] = z
                             
                             singleData = [Double(counter), x, y, z]
                             
-                            data.append(dict)
+                            data.append(singleData)
                             
                             if counter >= milliseconds{
                                 self.save_results(data)
@@ -98,10 +93,10 @@ class ViewController: UIViewController {
         RunLoop.current.add(timer!, forMode: RunLoop.Mode.default)
     }
     
-    func save_results(_ result:[[String:Double]]){
+    func save_results(_ result:[[Double]]){
         var csvString: String = "timestamp(ms),acceleration.x, acceleration.y, acceleration.z"
-        for sample in result{
-            csvString += "\(sample["counter"]!), \(sample["x"]!), \(sample["y"]!), \(sample["z"]!)\n"
+        for res in result{
+            csvString += "\(res[0]), \(res[1]), \(res[2]), \(res[3])\n"
         }
         //print(csvString)
         let fileManager = FileManager.default
