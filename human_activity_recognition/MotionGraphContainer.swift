@@ -12,11 +12,9 @@ import simd
 
 protocol MotionGraphContainer {
     
-    var motionManager: CMMotionManager? { get set }
-    
     var valueLabels: [UILabel]! { get }
     
-    func startUpdates()
+    func get_accelerometer_data()
     
     func stopUpdates()
 }
