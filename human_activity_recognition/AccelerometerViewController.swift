@@ -9,17 +9,20 @@
 import UIKit
 import CoreMotion
 import simd
+import CoreML
 
-class AccelerometerViewController: UIViewController, MotionGraphContainer {
+
+class AccelerometerViewController: UIViewController, MotionGraphContainer  {
+    // import the coreml model! so convenient!!!
+    let model = coreml_model()
     
     // here the acceleration values for x,y,z are displayed
     @IBOutlet weak var graphView: GraphView!
+    @IBOutlet weak var predictionLabel: UILabel!
     
     @IBAction func goBackButtonClick(_ sender: Any) {
     }
-    
     @IBOutlet weak var goBackButtonClick: UIButton!
-    
     
     let hertz: Int = 50  // 50Hz
     let milliseconds: Int = 10000
@@ -32,6 +35,7 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.predictionLabel.alpha = 0.0
         get_accelerometer_data()
     }
     
@@ -89,21 +93,18 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer {
         RunLoop.current.add(timer!, forMode: RunLoop.Mode.default)
     }
     
+    
     func predict(_ result:[[Double]]){
-        var csvString: String = "timestamp(ms),acceleration.x, acceleration.y, acceleration.z"
-        for res in result{
-            csvString += "\(res[0]), \(res[1]), \(res[2]), \(res[3])\n"
+        var flattened_result = Array(result.joined())
+        flattened_result = Array(flattened_result.prefix(upTo: 1500))
+        let mlMultiArrayInput = try? MLMultiArray(shape:[1500], dataType:MLMultiArrayDataType.double)
+        
+        for (i,elem) in flattened_result.enumerated() {
+            mlMultiArrayInput![i] = NSNumber(value: elem)
         }
-        //print(csvString)
-        let fileManager = FileManager.default
-        do {
-            let path = try fileManager.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
-            print("path:\(path)")
-            let fileURL = path.appendingPathComponent("CSVRec.csv")
-            try csvString.write(to: fileURL, atomically: true, encoding: .utf8)
-        } catch {
-            print("error creating file")
-        }
+        let prediction = try? self.model.prediction(input: coreml_modelInput(sensor_data: mlMultiArrayInput!))
+        print(prediction?.output ?? "Could not predict")
+        print(prediction?.classLabel ?? "Could not predict")
         
     }
     

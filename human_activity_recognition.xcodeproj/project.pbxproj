@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1A040122385B98007AF461 /* coreml_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A040022385B98007AF461 /* coreml_model.mlmodel */; };
+		7F3D847022381DE400E19387 /* classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D846F22381DE400E19387 /* classifier.swift */; };
 		7F6B7FA02236574C00AAAE4E /* AccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B7F9F2236574C00AAAE4E /* AccelerometerViewController.swift */; };
 		7F6B7FA22236576800AAAE4E /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B7FA12236576800AAAE4E /* GraphView.swift */; };
 		7F6B7FA52236577600AAAE4E /* CGContext+GraphLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B7FA32236577600AAAE4E /* CGContext+GraphLines.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F1A040022385B98007AF461 /* coreml_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = coreml_model.mlmodel; sourceTree = "<group>"; };
+		7F3D846F22381DE400E19387 /* classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classifier.swift; sourceTree = "<group>"; };
 		7F6B7F9F2236574C00AAAE4E /* AccelerometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerViewController.swift; sourceTree = "<group>"; };
 		7F6B7FA12236576800AAAE4E /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		7F6B7FA32236577600AAAE4E /* CGContext+GraphLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+GraphLines.swift"; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				7F6B7FA32236577600AAAE4E /* CGContext+GraphLines.swift */,
+				7F1A040022385B98007AF461 /* coreml_model.mlmodel */,
 				7F6B7FA72236578200AAAE4E /* MotionGraphContainer.swift */,
 				7F6B7FA42236577600AAAE4E /* GraphSegment.swift */,
 				7F6B7FA12236576800AAAE4E /* GraphView.swift */,
@@ -121,6 +126,7 @@
 				7F93DAFC222EE93B003FE149 /* LaunchScreen.storyboard */,
 				7F93DAFF222EE93B003FE149 /* Info.plist */,
 				7F93DAF7222EE93A003FE149 /* human_activity_recognition.xcdatamodeld */,
+				7F3D846F22381DE400E19387 /* classifier.swift */,
 			);
 			path = human_activity_recognition;
 			sourceTree = "<group>";
@@ -279,8 +285,10 @@
 				7F6B7FA52236577600AAAE4E /* CGContext+GraphLines.swift in Sources */,
 				7F6B7FA22236576800AAAE4E /* GraphView.swift in Sources */,
 				7F93DAF3222EE93A003FE149 /* ViewController.swift in Sources */,
+				7F3D847022381DE400E19387 /* classifier.swift in Sources */,
 				7F93DAF9222EE93A003FE149 /* human_activity_recognition.xcdatamodeld in Sources */,
 				7F6B7FA02236574C00AAAE4E /* AccelerometerViewController.swift in Sources */,
+				7F1A040122385B98007AF461 /* coreml_model.mlmodel in Sources */,
 				7F93DAF1222EE93A003FE149 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

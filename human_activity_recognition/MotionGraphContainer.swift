@@ -26,9 +26,9 @@ extension MotionGraphContainer {
     
     func setValueLabels(xyz: double3) {
         let sortedLabels = self.sortedLabels
-        sortedLabels[0].text = String(format: "x: %+6.4f", xyz[0])
-        sortedLabels[1].text = String(format: "y: %+6.4f", xyz[1])
-        sortedLabels[2].text = String(format: "z: %+6.4f", xyz[2])
+        sortedLabels[0].text = String(format: "acc-x: %+6.4f", xyz[0])
+        sortedLabels[1].text = String(format: "acc-y: %+6.4f", xyz[1])
+        sortedLabels[2].text = String(format: "acc-z: %+6.4f", xyz[2])
     }
     
 }
