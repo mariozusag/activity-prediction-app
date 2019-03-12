@@ -35,7 +35,6 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer  {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.predictionLabel.alpha = 0.0
         get_accelerometer_data()
     }
     
@@ -74,7 +73,10 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer  {
                     singleData = [Double(counter), x, y, z]
                     
                     data.append(singleData)
-                    
+                    if counter%1000 == 0{
+                        let remaining = 10-Int(counter/1000)
+                        self.predictionLabel.text = "\(remaining)s"
+                    }
                     if counter >= self.milliseconds{
                         self.predict(data)
                         timer.invalidate()
@@ -102,9 +104,22 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer  {
         for (i,elem) in flattened_result.enumerated() {
             mlMultiArrayInput![i] = NSNumber(value: elem)
         }
-        let prediction = try? self.model.prediction(input: coreml_modelInput(sensor_data: mlMultiArrayInput!))
-        print(prediction?.output ?? "Could not predict")
-        print(prediction?.classLabel ?? "Could not predict")
+        
+         let prediction = try! model.prediction(input: coreml_modelInput(sensor_data: mlMultiArrayInput!))
+        
+        let prediction_output = prediction.output
+        
+        let predictedJoggingScore = prediction_output["jogging"]!
+        let predictedWalkingScore = prediction_output["walking"]!
+        
+        if predictedWalkingScore > predictedJoggingScore{
+            self.predictionLabel.text = String(format: "You were walking: %.2f%", predictedWalkingScore*100)
+        }
+        else{
+            self.predictionLabel.text = String(format: "You were running: %.2f%", predictedJoggingScore*100)
+        }
+        
+        
         
     }
     
