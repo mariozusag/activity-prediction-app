@@ -15,6 +15,25 @@ import CoreML
 class AccelerometerViewController: UIViewController, MotionGraphContainer  {
     // import the coreml model! so convenient!!!
     let model = coreml_model()
+    /*
+     mean values from training set:
+    {'acc.x': -0.003910640484405802,
+        'acc.y': 0.04424379658212213,
+        'acc.z': 0.039271765727086426}
+     */
+    /*
+     std values from training set:
+     {'acc.x': 0.3282088621907262,
+     'acc.y': 0.5275661316963115,
+     'acc.z': 0.3762119450049213}
+     */
+    let x_mean = -0.003910640484405802
+    let y_mean = 0.04424379658212213
+    let z_mean = 0.039271765727086426
+    
+    let x_std = 0.3282088621907262
+    let y_std = 0.5275661316963115
+    let z_std = 0.3762119450049213
     
     // here the acceleration values for x,y,z are displayed
     @IBOutlet weak var graphView: GraphView!
@@ -61,9 +80,10 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer  {
                 (timer) in
                 // Get the accelerometer data.
                 if let measurements = self.manager.accelerometerData{
-                    let x = measurements.acceleration.x
-                    let y = measurements.acceleration.y
-                    let z = measurements.acceleration.z
+                    let x = (measurements.acceleration.x - self.x_mean)/self.x_std  // normalize like in training
+                    let y = (measurements.acceleration.y - self.y_mean)/self.y_std
+                    let z = (measurements.acceleration.z - self.z_mean)/self.z_std
+                    
                     
                     let acceleration: double3 = [x,y,z]
                     
@@ -97,7 +117,7 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer  {
     
     
     func predict(_ result:[[Double]]){
-        // take in 10s of accelerometer data (500 datapoints) and feed it to the trained network
+        // take in 10s of accelerometer data (500 datapoints*3 acceleration axes = 1500) and feed it to the trained network
         var flattened_result = Array(result.joined())
         flattened_result = Array(flattened_result.prefix(upTo: 1500)) //flattened for MLMultiArray
         let mlMultiArrayInput = try? MLMultiArray(shape:[1500], dataType:MLMultiArrayDataType.double)
