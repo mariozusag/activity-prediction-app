@@ -70,7 +70,7 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer  {
                     self.graphView.add(acceleration)
                     self.setValueLabels(xyz: acceleration)
                     
-                    singleData = [Double(counter), x, y, z]
+                    singleData = [x, y, z]
                     
                     data.append(singleData)
                     if counter%1000 == 0{
@@ -97,8 +97,9 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer  {
     
     
     func predict(_ result:[[Double]]){
+        // take in 10s of accelerometer data (500 datapoints) and feed it to the trained network
         var flattened_result = Array(result.joined())
-        flattened_result = Array(flattened_result.prefix(upTo: 1500))
+        flattened_result = Array(flattened_result.prefix(upTo: 1500)) //flattened for MLMultiArray
         let mlMultiArrayInput = try? MLMultiArray(shape:[1500], dataType:MLMultiArrayDataType.double)
         
         for (i,elem) in flattened_result.enumerated() {
@@ -113,10 +114,12 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer  {
         let predictedWalkingScore = prediction_output["walking"]!
         
         if predictedWalkingScore > predictedJoggingScore{
-            self.predictionLabel.text = String(format: "You were walking: %.2f%", predictedWalkingScore*100)
+            let msg = String(format: "You were walking: %.2f", predictedWalkingScore*100)
+            self.predictionLabel.text = "\(msg)% certain"
         }
         else{
-            self.predictionLabel.text = String(format: "You were running: %.2f%", predictedJoggingScore*100)
+            let msg = String(format: "You were running: %.2f", predictedJoggingScore*100)
+            self.predictionLabel.text = "\(msg)% certain"
         }
         
         
