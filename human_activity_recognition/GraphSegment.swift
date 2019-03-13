@@ -20,7 +20,9 @@ class GraphSegment: UIView {
     
     private let valueRanges: [ClosedRange<Double>]
     
-    static let lineColors: [UIColor] = [.blue, .init(red: 0, green: 0.4, blue: 0.1, alpha: 1.0), .orange]
+    static let lineColors: [UIColor] = [.init(red: 0.216, green: 0.698, blue: 0.871, alpha: 1.0),
+                                        .init(red: 0.357, green: 0.844, blue: 0.392, alpha: 1.0),
+                                        .init(red: 0.933, green: 0.392, blue: 0.463, alpha: 1.0)]
     
     var gridLinePositions = [CGFloat]()
     

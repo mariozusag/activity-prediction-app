@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F3122722239B55C00AEAAF1 /* live_coreml_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7F3122712239B55C00AEAAF1 /* live_coreml_model.mlmodel */; };
 		7F3A32A922393FE10055AC6B /* coreml_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A32A822393FE10055AC6B /* coreml_model.mlmodel */; };
+		7F3A32AB223983260055AC6B /* LIVEAccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A32AA223983260055AC6B /* LIVEAccelerometerViewController.swift */; };
 		7F3D847022381DE400E19387 /* classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D846F22381DE400E19387 /* classifier.swift */; };
 		7F6B7FA02236574C00AAAE4E /* AccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B7F9F2236574C00AAAE4E /* AccelerometerViewController.swift */; };
 		7F6B7FA22236576800AAAE4E /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B7FA12236576800AAAE4E /* GraphView.swift */; };
@@ -42,7 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F3122712239B55C00AEAAF1 /* live_coreml_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = live_coreml_model.mlmodel; sourceTree = "<group>"; };
 		7F3A32A822393FE10055AC6B /* coreml_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = coreml_model.mlmodel; sourceTree = "<group>"; };
+		7F3A32AA223983260055AC6B /* LIVEAccelerometerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIVEAccelerometerViewController.swift; sourceTree = "<group>"; };
 		7F3D846F22381DE400E19387 /* classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classifier.swift; sourceTree = "<group>"; };
 		7F6B7F9F2236574C00AAAE4E /* AccelerometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerViewController.swift; sourceTree = "<group>"; };
 		7F6B7FA12236576800AAAE4E /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
@@ -118,7 +122,9 @@
 				7F6B7FA72236578200AAAE4E /* MotionGraphContainer.swift */,
 				7F6B7FA42236577600AAAE4E /* GraphSegment.swift */,
 				7F6B7FA12236576800AAAE4E /* GraphView.swift */,
+				7F3A32AA223983260055AC6B /* LIVEAccelerometerViewController.swift */,
 				7F6B7F9F2236574C00AAAE4E /* AccelerometerViewController.swift */,
+				7F3122712239B55C00AEAAF1 /* live_coreml_model.mlmodel */,
 				7F93DAF0222EE93A003FE149 /* AppDelegate.swift */,
 				7F93DAF2222EE93A003FE149 /* ViewController.swift */,
 				7F93DAF4222EE93A003FE149 /* Main.storyboard */,
@@ -284,7 +290,9 @@
 				7F6B7FA62236577600AAAE4E /* GraphSegment.swift in Sources */,
 				7F6B7FA52236577600AAAE4E /* CGContext+GraphLines.swift in Sources */,
 				7F6B7FA22236576800AAAE4E /* GraphView.swift in Sources */,
+				7F3A32AB223983260055AC6B /* LIVEAccelerometerViewController.swift in Sources */,
 				7F93DAF3222EE93A003FE149 /* ViewController.swift in Sources */,
+				7F3122722239B55C00AEAAF1 /* live_coreml_model.mlmodel in Sources */,
 				7F3D847022381DE400E19387 /* classifier.swift in Sources */,
 				7F93DAF9222EE93A003FE149 /* human_activity_recognition.xcdatamodeld in Sources */,
 				7F6B7FA02236574C00AAAE4E /* AccelerometerViewController.swift in Sources */,
@@ -467,6 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P79FDN44LA;
 				INFOPLIST_FILE = human_activity_recognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,6 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P79FDN44LA;
 				INFOPLIST_FILE = human_activity_recognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
