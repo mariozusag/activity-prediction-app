@@ -8,6 +8,12 @@ which is fed with motion accelerometer data (10seconds).
 ### Requirements
 > - iOS 12 (for CoreML to work)
 > - Xcode10
+
 ### Installation
 Install [TestFlight](https://itunes.apple.com/us/app/testflight/id899247664?mt=8) on your iPhone 
-to use the App and type in the following voucher to test the Beta App: 
+to use the App and type in the following voucher to test the Beta App: https://testflight.apple.com/join/EOEMogqS
+
+### Screenshots
+Homescreen                 |  10s screen               |  10s prediction           | Live version  
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](HAR_HomeScreen.png)    |  ![](HAR_10s.png)         | ![](HAR_10s_prediction.png)| ![Live](HAR_live.png)
