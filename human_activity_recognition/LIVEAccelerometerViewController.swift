@@ -15,25 +15,14 @@ import CoreML
 class LiveAccelerometerViewController: UIViewController, MotionGraphContainer  {
     // import the coreml model! so convenient!!!
     let model = live_coreml_model()
-    /*
-     mean values from training set:
-     {'acc.x': -0.003910640484405802,
-     'acc.y': 0.04424379658212213,
-     'acc.z': 0.039271765727086426}
-     */
-    /*
-     std values from training set:
-     {'acc.x': 0.3282088621907262,
-     'acc.y': 0.5275661316963115,
-     'acc.z': 0.3762119450049213}
-     */
-    let x_mean = -0.0062030975433088765
-    let y_mean = 0.058100063882162246
-    let z_mean = 0.051295166045208625
     
-    let x_std = 0.37626828873183993
-    let y_std = 0.604159095921093
-    let z_std = 0.43059768003197724
+    let x_mean = -0.003910640484405802
+    let y_mean = 0.04424379658212213
+    let z_mean = 0.039271765727086426
+    
+    let x_std = 0.3282088621907262
+    let y_std = 0.5275661316963115
+    let z_std = 0.3762119450049213
     
     // here the acceleration values for x,y,z are displayed
     
